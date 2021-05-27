@@ -18,17 +18,29 @@ namespace DataAccessLayer.Concrate.Repositories
 
         public GenericRepository()
         {
-            _object = c.Set<T>();//contexte bağlı olaran gönderilen T değeri
+            _object = c.Set<T>();//contexte bağlı olarak gönderilen T değeri
         }
         public void Delete(T p)
         {
-            _object.Remove(p);
+            var deletedEntity = c.Entry(p);
+            deletedEntity.State = EntityState.Deleted;
+
+          //  _object.Remove(p);
             c.SaveChanges();
+        }
+
+        public T Get(Expression<Func<T, bool>> filter)
+        {
+            return _object.SingleOrDefault(filter);
         }
 
         public void Insert(T p)
         {
-            _object.Add(p);
+            // _object.Add(p);
+            var addEntity = c.Entry(p);
+            addEntity.State = EntityState.Added;
+            
+
             c.SaveChanges();
         }
 
@@ -44,6 +56,9 @@ namespace DataAccessLayer.Concrate.Repositories
 
         public void Update(T p)
         {
+            var updatedEntity = c.Entry(p);
+            updatedEntity.State = EntityState.Modified;
+
             c.SaveChanges();
         }
     }

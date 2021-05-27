@@ -62,9 +62,43 @@
     <Compile Include="Concrate\Repositories\CategoryRepository.cs" />
     <Compile Include="Concrate\Repositories\GenericRepository.cs" />
     <Compile Include="Concrate\Repositories\WriterRepository.cs" />
+    <Compile Include="EntityFramework\EfAboutDal.cs" />
+    <Compile Include="EntityFramework\EfCategoryDal.cs" />
+    <Compile Include="EntityFramework\EfContactDal.cs" />
+    <Compile Include="EntityFramework\EfContentDal.cs" />
+    <Compile Include="EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202105251924206_m1.cs" />
     <Compile Include="Migrations\202105251924206_m1.designer.cs">
       <DependentUpon>202105251924206_m1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105271051175_mig_witer_edit.cs" />
+    <Compile Include="Migrations\202105271051175_mig_witer_edit.designer.cs">
+      <DependentUpon>202105271051175_mig_witer_edit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105271206179_writer_title_add.cs" />
+    <Compile Include="Migrations\202105271206179_writer_title_add.designer.cs">
+      <DependentUpon>202105271206179_writer_title_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105271212201_mig-writerTitleEdit.cs" />
+    <Compile Include="Migrations\202105271212201_mig-writerTitleEdit.designer.cs">
+      <DependentUpon>202105271212201_mig-writerTitleEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105271748352_migration_imagesizechange.cs" />
+    <Compile Include="Migrations\202105271748352_migration_imagesizechange.designer.cs">
+      <DependentUpon>202105271748352_migration_imagesizechange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105271843084_mig_writer_addstatus.cs" />
+    <Compile Include="Migrations\202105271843084_mig_writer_addstatus.designer.cs">
+      <DependentUpon>202105271843084_mig_writer_addstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105272014393_mig_contstatusadd.cs" />
+    <Compile Include="Migrations\202105272014393_mig_contstatusadd.designer.cs">
+      <DependentUpon>202105272014393_mig_contstatusadd.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202105272036572_migrationheadingstatusadd.cs" />
+    <Compile Include="Migrations\202105272036572_migrationheadingstatusadd.designer.cs">
+      <DependentUpon>202105272036572_migrationheadingstatusadd.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -82,6 +116,27 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202105251924206_m1.resx">
       <DependentUpon>202105251924206_m1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105271051175_mig_witer_edit.resx">
+      <DependentUpon>202105271051175_mig_witer_edit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105271206179_writer_title_add.resx">
+      <DependentUpon>202105271206179_writer_title_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105271212201_mig-writerTitleEdit.resx">
+      <DependentUpon>202105271212201_mig-writerTitleEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105271748352_migration_imagesizechange.resx">
+      <DependentUpon>202105271748352_migration_imagesizechange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105271843084_mig_writer_addstatus.resx">
+      <DependentUpon>202105271843084_mig_writer_addstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105272014393_mig_contstatusadd.resx">
+      <DependentUpon>202105272014393_mig_contstatusadd.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202105272036572_migrationheadingstatusadd.resx">
+      <DependentUpon>202105272036572_migrationheadingstatusadd.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />
