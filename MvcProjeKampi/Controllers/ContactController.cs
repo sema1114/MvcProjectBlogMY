@@ -30,7 +30,7 @@ namespace MvcProjeKampi.Controllers
             return View(contactValues);
         }
 
-        public PartialViewResult ContactPartial()
+        public PartialViewResult MessageListMenu()
         {
             return PartialView();
         }
