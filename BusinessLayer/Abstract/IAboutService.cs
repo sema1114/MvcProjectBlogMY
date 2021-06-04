@@ -16,4 +16,5 @@ namespace BusinessLayer.Abstract
         void AboutDelete(About about);
         
     }
+    
 }
