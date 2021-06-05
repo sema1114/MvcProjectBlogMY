@@ -19,9 +19,9 @@ namespace BusinessLayer.Concrate
             _messageDal = messageDal;
         }
 
-        public Message GetById(int id)
+        public Message GetByID(int id)
         {
-            throw new NotImplementedException();
+            return _messageDal.Get(x => x.MessageID == id);
         }
 
         public List<Message> GetListInbox()
@@ -41,12 +41,12 @@ namespace BusinessLayer.Concrate
 
         public void MessageDelete(Message message)
         {
-            throw new NotImplementedException();
+            _messageDal.Delete(message);
         }
 
         public void MessageUpdate(Message message)
         {
-            throw new NotImplementedException();
+            _messageDal.Update(message);
         }
     }
 }
