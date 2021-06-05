@@ -2,7 +2,9 @@
 using BusinessLayer.ValidationRules;
 using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
+
 using FluentValidation.Results;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,7 +17,9 @@ namespace MvcProjeKampi.Controllers
     {
         // GET: Message
         MessageManager mm = new MessageManager(new EfMessageDal());
+
         MessageValidator messagevalidator = new MessageValidator();
+
         public ActionResult Inbox()
         {
             var messageList = mm.GetListInbox();
@@ -25,6 +29,7 @@ namespace MvcProjeKampi.Controllers
 
         public ActionResult Sendbox()
         {
+
             var messageList = mm.GetListSendBox();
             return View(messageList);
         }
@@ -54,6 +59,7 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult NewMessage(Message p)
         {
+
             ValidationResult results = messagevalidator.Validate(p);
 
             if (results.IsValid)

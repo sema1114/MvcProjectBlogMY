@@ -22,6 +22,7 @@ namespace BusinessLayer.Concrate
         public Message GetById(int id)
         {
             return _messageDal.Get(x => x.MessageID == id);
+
         }
 
         public List<Message> GetListInbox()
@@ -42,14 +43,15 @@ namespace BusinessLayer.Concrate
 
         public void MessageDelete(Message message)
         {
+
             _messageDal.Delete(message);
 
         }
 
         public void MessageUpdate(Message message)
         {
-            _messageDal.Update(message);
 
+            _messageDal.Update(message);
         }
     }
 }
