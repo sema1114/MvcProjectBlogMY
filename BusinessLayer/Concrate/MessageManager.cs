@@ -37,16 +37,19 @@ namespace BusinessLayer.Concrate
         public void MessageAdd(Message message)
         {
             _messageDal.Insert(message);
+
         }
 
         public void MessageDelete(Message message)
         {
             _messageDal.Delete(message);
+
         }
 
         public void MessageUpdate(Message message)
         {
             _messageDal.Update(message);
+
         }
     }
 }
