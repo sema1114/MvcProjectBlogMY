@@ -19,7 +19,7 @@ namespace BusinessLayer.Concrate
             _messageDal = messageDal;
         }
 
-        public Message GetByID(int id)
+        public Message GetById(int id)
         {
             return _messageDal.Get(x => x.MessageID == id);
         }

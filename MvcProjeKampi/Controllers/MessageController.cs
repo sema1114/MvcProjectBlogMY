@@ -32,7 +32,7 @@ namespace MvcProjeKampi.Controllers
         [HttpGet]
         public ActionResult GetInboxMessageDetails(int id)
         {
-            var values = mm.GetByID(id);
+            var values = mm.GetById(id);
             return View(values);
         }
 
@@ -40,7 +40,7 @@ namespace MvcProjeKampi.Controllers
         [HttpGet]
         public ActionResult GetSendBoxMessageDetails(int id)
         {
-            var values = mm.GetByID(id);
+            var values = mm.GetById(id);
             return View(values);
         }
 
