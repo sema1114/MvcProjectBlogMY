@@ -21,5 +21,7 @@ namespace DataAccessLayer.Concrate
 
         public DbSet<ImageFile> ImageFiles { get; set; }
 
+        public DbSet<Admin> Admins { get; set; }
+
     }
 }
