@@ -20,6 +20,7 @@ namespace MvcProjeKampi.Controllers
 
         MessageValidator messagevalidator = new MessageValidator();
 
+        [Authorize]
         public ActionResult Inbox()
         {
             var messageList = mm.GetListInbox();

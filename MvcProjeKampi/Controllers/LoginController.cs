@@ -6,6 +6,7 @@ using System.Linq;
 
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace MvcProjeKampi.Controllers
 {
@@ -25,8 +26,10 @@ namespace MvcProjeKampi.Controllers
             var adminuserinfo = c.Admins.FirstOrDefault(x=>x.AdminUserName==p.AdminUserName && x.AdminPassword==p.AdminPassword);
 
             if (adminuserinfo != null)
-            {
-                //işlemler kategori sayfasına git oraya git projenin admin tarafını aç
+            {   //işlemler kategori sayfasına git oraya git projenin admin tarafını aç
+                FormsAuthentication.SetAuthCookie(adminuserinfo.AdminUserName, false);
+                Session["AdminUserName"] = adminuserinfo.AdminUserName;
+               
                 return RedirectToAction("Index", "AdminCategory");
 
             }
@@ -35,7 +38,7 @@ namespace MvcProjeKampi.Controllers
                 return RedirectToAction("Index");
             }
 
-            return View();
+           
         }
     }
 }
