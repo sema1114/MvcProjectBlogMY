@@ -15,7 +15,10 @@ namespace MvcProjeKampi.Controllers
     {
         CategoryManager cm = new CategoryManager(new EfCategoryDal());
 
-        [Authorize]
+
+
+
+        [Authorize(Roles="B")]//Sadece B rolune sahip olan kişiler bunu görebilsin
         public ActionResult Index()
         {
             var categoryVlues = cm.GetList();
