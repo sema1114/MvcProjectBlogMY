@@ -44,6 +44,11 @@ namespace BusinessLayer.Concrate
             return _contentDal.List();
         }
 
+        public List<Content> GetListByWriter()
+        {
+            return _contentDal.List(x=>x.WriterID==4);
+        }
+
         public List<Content> GetLİstByHeadingID(int id)
         {
             return _contentDal.List(x=>x.HeadingID==id);

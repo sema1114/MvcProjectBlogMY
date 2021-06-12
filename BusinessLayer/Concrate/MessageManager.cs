@@ -27,12 +27,12 @@ namespace BusinessLayer.Concrate
 
         public List<Message> GetListInbox()
         {
-            return _messageDal.List(x => x.ReceiverMail == "admin@gmail.com");
+            return _messageDal.List(x => x.ReceiverMail == "mocococo@gmail.com");
         }
 
         public List<Message> GetListSendBox()
         {
-            return _messageDal.List(x => x.SenderMail == "admin@gmail.com");
+            return _messageDal.List(x => x.SenderMail == "mocococo@gmail.com");
         }
 
         public void MessageAdd(Message message)

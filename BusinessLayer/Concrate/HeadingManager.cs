@@ -44,5 +44,10 @@ namespace BusinessLayer.Concrate
         {
             return _headingDal.List();
         }
+
+        public List<Heading> ListByWriter()
+        {
+            return _headingDal.List(x => x.WriterID==3);
+        }
     }
 }
