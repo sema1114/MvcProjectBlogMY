@@ -45,9 +45,9 @@ namespace BusinessLayer.Concrate
             return _headingDal.List();
         }
 
-        public List<Heading> ListByWriter()
+        public List<Heading> ListByWriter(int id)
         {
-            return _headingDal.List(x => x.WriterID==3);
+            return _headingDal.List(x => x.WriterID==id);
         }
     }
 }

@@ -13,7 +13,6 @@ namespace MvcProjeKampi.Controllers
     public class WriterPanelContentController : Controller
     {
         ContentManager cm = new ContentManager(new EfContentDal());
-        WriterManager wm = new WriterManager(new EfWriterDal());
         // GET: WriterPanelContent
         public ActionResult MyContent(string p)
         {
