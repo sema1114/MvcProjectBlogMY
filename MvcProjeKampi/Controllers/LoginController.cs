@@ -30,7 +30,7 @@ namespace MvcProjeKampi.Controllers
                 FormsAuthentication.SetAuthCookie(adminuserinfo.AdminUserName, false);
                 Session["AdminUserName"] = adminuserinfo.AdminUserName;
                
-                return RedirectToAction("Index", "AdminCategory");
+                return RedirectToAction("MyContent", "WriterPanelContent");
 
             }
             else
@@ -40,5 +40,33 @@ namespace MvcProjeKampi.Controllers
 
            
         }
+
+        [HttpGet]
+        public ActionResult WriterLogin()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult WriterLogin(Writer p)
+        {
+            Context c = new Context();
+            var writeruserinfo = c.Writers.FirstOrDefault(x => x.WriterMail == p.WriterMail && x.WriterPassword == p.WriterPassword);
+
+            if (writeruserinfo != null)
+            {   //işlemler kategori sayfasına git oraya git projenin admin tarafını aç
+                FormsAuthentication.SetAuthCookie(writeruserinfo.WriterMail, false);
+                Session["WriterMail"] = writeruserinfo.WriterMail;
+
+                return RedirectToAction("MyContent", "WriterPanelContent");
+
+            }
+            else
+            {
+                return RedirectToAction("WriterLogin");
+            }
+
+        }
+
     }
 }
