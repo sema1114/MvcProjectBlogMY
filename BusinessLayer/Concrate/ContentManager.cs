@@ -20,17 +20,17 @@ namespace BusinessLayer.Concrate
 
         public void CategoryAdd(Content category)
         {
-            throw new NotImplementedException();
+            _contentDal.Insert(category);
         }
 
         public void CategoryDelete(Content category)
         {
-            throw new NotImplementedException();
+            _contentDal.Delete(category);
         }
 
         public void CategoryUpdate(Content category)
         {
-            throw new NotImplementedException();
+            _contentDal.Update(category);
         }
 
         public Content GetByID(int id)

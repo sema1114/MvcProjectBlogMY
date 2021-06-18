@@ -98,6 +98,12 @@ namespace MvcProjeKampi.Controllers
         }
 
 
+        public ActionResult AllHeading()
+        {
+            var headings = hm.List();
+            return View(headings);
+        }
+
 
     }
 }
