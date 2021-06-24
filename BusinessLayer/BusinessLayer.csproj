@@ -61,6 +61,7 @@
     <Compile Include="Abstract\IHeadingService.cs" />
     <Compile Include="Abstract\IImageFileService.cs" />
     <Compile Include="Abstract\IMessageService.cs" />
+    <Compile Include="Abstract\IWriterLoginService.cs" />
     <Compile Include="Abstract\IWriterService.cs" />
     <Compile Include="Concrate\AboutManager.cs" />
     <Compile Include="Concrate\CategoryManager.cs" />
@@ -69,6 +70,7 @@
     <Compile Include="Concrate\HeadingManager.cs" />
     <Compile Include="Concrate\ImageFileManager.cs" />
     <Compile Include="Concrate\MessageManager.cs" />
+    <Compile Include="Concrate\WriterLoginManager.cs" />
     <Compile Include="Concrate\WriterManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ValidationRules\CategoryValidator.cs" />

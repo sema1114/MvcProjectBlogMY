@@ -1,4 +1,6 @@
-﻿using DataAccessLayer.Concrate;
+﻿using BusinessLayer.Concrate;
+using DataAccessLayer.Concrate;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -13,6 +15,8 @@ namespace MvcProjeKampi.Controllers
     [AllowAnonymous]
     public class LoginController : Controller
     {
+
+        WriterLoginManager wlm = new WriterLoginManager( new EfWriterDal());
         // GET: Login
         [HttpGet]
         public ActionResult Index()
@@ -51,8 +55,10 @@ namespace MvcProjeKampi.Controllers
         [HttpPost]
         public ActionResult WriterLogin(Writer p)
         {
-            Context c = new Context();
-            var writeruserinfo = c.Writers.FirstOrDefault(x => x.WriterMail == p.WriterMail && x.WriterPassword == p.WriterPassword);
+            //Context c = new Context();
+            //var writeruserinfo = c.Writers.FirstOrDefault(x => x.WriterMail == p.WriterMail && x.WriterPassword == p.WriterPassword);
+
+            var writeruserinfo = wlm.GetWriter(p.WriterMail,p.WriterPassword);
 
             if (writeruserinfo != null)
             {   //işlemler kategori sayfasına git oraya git projenin admin tarafını aç

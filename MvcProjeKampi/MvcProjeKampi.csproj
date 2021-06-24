@@ -2585,6 +2585,7 @@
     <Content Include="Views\WriterPanel\AllHeading.cshtml" />
     <Content Include="Views\WriterPanelContent\AddContent.cshtml" />
     <Content Include="Views\WriterPanelContent\TodoList.cshtml" />
+    <Content Include="Views\Test\Test1.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
