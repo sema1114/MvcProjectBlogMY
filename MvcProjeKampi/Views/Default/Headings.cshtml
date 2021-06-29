@@ -11,7 +11,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Mvc Proje Kampı</title>
+    <title>Mvc Proje Camp</title>
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/fontawesome-free/css/all.min.css">
     <!-- IonIcons -->
@@ -62,26 +62,28 @@ to get the desired effect
                     </div>
                 </div>
                 <!-- Sidebar Menu -->
+           
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
     with font-awesome or any other icon font library -->
                         
+
                         @foreach (var item in Model)
                         {
 
-                  
-                        <li class="nav-item">
-                            <a href="/Default/Headings/@item.HeadingID" class="nav-link">
 
-                                <p>
-                                 @item.HeadingName  
-                                </p>
-                            </a>
-                        </li>
-                            }
-                   
-                        
+                            <li class="nav-item">
+                                <a href="/Default/Headings/@item.HeadingID" class="nav-link">
+
+                                    <p>
+                                        @item.HeadingName
+                                    </p>
+                                </a>
+                            </li>
+                        }
+
+
 
                     </ul>
                 </nav>
