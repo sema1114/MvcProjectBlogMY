@@ -63,23 +63,32 @@ to get the desired effect
                 <nav class="mt-2">
                     <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
                         <!-- Add icons to the links using the .nav-icon class
-                        with font-awesome or any other icon font library -->
-                        @if (User.IsInRole("B")) { //User rolu b ise görüntülesin diğerleri görüntüleyemez
+    with font-awesome or any other icon font library -->
+                        @if (User.IsInRole("B"))
+                        { //User rolu b ise görüntülesin diğerleri görüntüleyemez
 
-                        <li class="nav-item has-treeview ">
-                            <a href="/AdminCategory/Index/" class="nav-link">
-                                <i class="nav-icon fas fa-tachometer-alt"></i>
-                                <p>
-                                    Categories
-                                </p>
-                            </a>
-                        </li>
+                            <li class="nav-item has-treeview ">
+                                <a href="/AdminCategory/Index/" class="nav-link">
+                                    <i class="nav-icon fas fa-tachometer-alt"></i>
+                                    <p>
+                                        Categories
+                                    </p>
+                                </a>
+                            </li>
                         }
                         <li class="nav-item">
                             <a href="/Heading/Index/" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Headings
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="/Writer/Index/" class="nav-link">
+                                <i class="nav-icon fas fa-book-reader"></i>
+                                <p>
+                                    Articles
                                 </p>
                             </a>
                         </li>
@@ -136,7 +145,7 @@ to get the desired effect
                                 </p>
                             </a>
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="pages/calendar.html" class="nav-link">
                                 <i class="nav-icon fas fa-calendar-alt"></i>
