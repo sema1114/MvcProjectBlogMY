@@ -6,22 +6,14 @@ using System.Web.Mvc;
 
 namespace MvcProjeKampi.Controllers
 {
-    public class TestController : Controller
+    public class ChartController : Controller
     {
-        // GET: Test
+        // GET: Chart
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult Test1()
-        {
-            return View();
-        }
-
-        public ActionResult SweetAlert()
-        {
-            return View();
-        }
+        
     }
 }
